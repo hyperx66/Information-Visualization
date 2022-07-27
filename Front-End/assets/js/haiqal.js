@@ -158,6 +158,33 @@ function loadGraph1(year, country) {
           return y1(d.value);
         })
     );
+
+  svg.append("text")
+    .attr("x", width/2)
+    .attr("y1", width/2)
+    .attr("y2", width)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .text("Effect of Stringency Index on COVID-19 Cases");
+  
+  svg.append("text")
+    .attr("transform", "translate(" + (width/2) + " ," + (height+30) + ")")
+    .style("text-anchor", "middle")
+    .text("Quarter per year");
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -(height/2))
+    .attr("dy", -70)
+    .style("text-anchor", "middle")
+    .text("Totat COVID-19 Cases");
+  
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -(height/2))
+    .attr("dy", 540)
+    .style("text-anchor", "middle")
+    .text("Strigency Index (STI)");
 }
 
 function loadGraph2(year, country) {
@@ -226,6 +253,7 @@ function loadGraph2(year, country) {
   svg
     .append("g")
     .attr("transform", "translate(" + width + ",0)")
+    .text("Number of Covid Deaths")
     .call(d3.axisRight(y1));
 
   lineData = [];
@@ -274,4 +302,32 @@ function loadGraph2(year, country) {
           return y1(d.value);
         })
     );
+  
+  svg.append("text")
+    .attr("x", width/2)
+    .attr("y1", width/2)
+    .attr("y2", width)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .text("Effect of Stringency Index on Death Rates");
+  
+  svg.append("text")
+    .attr("transform", "translate(" + (width/2) + " ," + (height+30) + ")")
+    .style("text-anchor", "middle")
+    .text("Quarter per year");
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -(height/2))
+    .attr("dy", -70)
+    .style("text-anchor", "middle")
+    .text("Totat Deaths");
+  
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -(height/2))
+    .attr("dy", 520)
+    .style("text-anchor", "middle")
+    .text("Strigency Index (STI)");
+ 
 }
