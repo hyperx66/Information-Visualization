@@ -177,7 +177,7 @@ function loadGraph1(year, country) {
     .attr("x", -(height/2))
     .attr("dy", -70)
     .style("text-anchor", "middle")
-    .text("Totat COVID-19 Cases");
+    .text("Avg of COVID-19 Cases");
   
   svg.append("text")
     .attr("transform", "rotate(-90)")
@@ -321,7 +321,7 @@ function loadGraph2(year, country) {
     .attr("x", -(height/2))
     .attr("dy", -70)
     .style("text-anchor", "middle")
-    .text("Totat Deaths");
+    .text("Avg Deaths");
   
   svg.append("text")
     .attr("transform", "rotate(-90)")
